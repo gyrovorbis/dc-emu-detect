@@ -1,1 +1,1 @@
-./emu_detect.c
+../emu_detect.c
