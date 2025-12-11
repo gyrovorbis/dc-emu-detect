@@ -28,13 +28,16 @@ static void wdt_timeout(void *user_data) {
 }
 
 /* Returns true if the program is running on an emulator,
-   returns false if it's running on real HW. */
+   returns false if it's running on real HW.
+*/
 bool detect_emulator(void) {
     // Initialize our flag for whether the WDT has fired to false.
     atomic_bool fired = false;
+
     /* Enable the WDT in interval timer mode, with an initial counter valuoe of 0,
        counting up to 1 millisecond before calling our callback routine with a maximum
-       IRQ priority value of 15, passing our flag to toggle to denote that it was called. */
+       IRQ priority value of 15, passing our flag to the callback routine to toggle it.
+    */
     wdt_enable_timer(0, 1, 15, wdt_timeout, &fired); 
 
     // Wait for 2 ms before checking whether the WDT IRQ has fired (plenty of fuckin' time!)
