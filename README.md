@@ -1,6 +1,6 @@
 ```c
 /* emu_detect.c
-   Simple Sega Dreamcast Emulator Detection Routine for KOS-based Apps.
+   Sega Dreamcast Emulator Detection Routine for KOS-based Apps.
    Copyright (C) 2025 Falco Girgis
 
    This little bastard simply leverages the fact that no emulator that I am
