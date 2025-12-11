@@ -1,9 +1,10 @@
+```c
 /* emu_detect.c
    Simple Sega Dreamcast Emulator Detection Routine for KallistiOS Apps.
    Copyright (C) 2025 Falco Girgis
 
    This little bastard simply leverages the fact that no emulator that I am
-   aware of is emulatin the SH4's watchdog timer peripheral, as no commercial
+   aware of is emulating the SH4's watchdog timer peripheral, as no commercial
    game or SDK ever made use of it... UNTIL NOW. 
 */
 
@@ -53,3 +54,4 @@ int main(int argc, const char* argv[]) {
 
     return EXIT_SUCCESS;
 }
+```
