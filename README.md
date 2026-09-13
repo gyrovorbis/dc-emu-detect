@@ -20,7 +20,7 @@
 /* Callback function that gets called upon WDT timeouts.
 
    Simply setting an atomic boolean to true, to signify that the WDT
-   peripheral fired its timeout interrrupt properly.
+   peripheral fired its timeout interrupt properly.
 */
 static void wdt_timeout(void *user_data) {
     atomic_bool *fired = (atomic_bool *)user_data;
